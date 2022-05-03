@@ -1,4 +1,4 @@
 def print_last_digit(number):
-    number = abs(number)
-    print(f'{number % 10}', end='')
-    return number % 10
+    number = abs(number) % 10
+    print(number, end='')
+    return number
