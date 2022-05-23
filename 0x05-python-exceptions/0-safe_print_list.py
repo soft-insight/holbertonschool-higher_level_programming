@@ -1,15 +1,11 @@
 #!/usr/bin/python3
-def safe_print_list(my_list=[], x=0):
-    try:
-        my_list[x]
-        for i in range(x):
-            print(my_list[i], end='')
-        print()
-        return x
-    except IndexError:
-        j = 0
-        for i in my_list:
+def safe_print_list_integers(my_list=[], x=0):
+    j = 0
+    for i in range(x):
+        try: 
+            print("{:d}".format(my_list[i]), end = '')
             j += 1
-            print(i, end='')
-        print()
-        return j
+        except (TypeError,  ValueError):
+            continue
+    print()
+    return j
