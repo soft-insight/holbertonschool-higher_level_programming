@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-# 0-square.py
-
 class Square:
-    """A class for a square."""
+    """
+    A class for an square
+    """
     pass
