@@ -2,8 +2,8 @@
 """
 A class Square:
     * accessing to private attibute.
-    * raise exception if __size < 0 or not an int 
-    * @properties 
+    * raise exception if __size < 0 or not an int
+    * @properties
 """
 
 
@@ -37,4 +37,3 @@ class Square:
     def area(self):
         """Return the current area of the square."""
         return self.__size ** 2
-    
