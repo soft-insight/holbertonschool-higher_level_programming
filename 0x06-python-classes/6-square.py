@@ -37,6 +37,7 @@ class Square:
 
     @property
     def position(self):
+        """Get/set the current position of the square."""
         return self.__position
 
     @position.setter
@@ -53,14 +54,15 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
+        """Print the square with the # character."""
         if self.__size == 0:
             print()
 
         for k in range(self.__position[1]):
-            print()
+            print("")
         for i in range(self.__size):
             for x in range(self.__position[0]):
-                print(end=" ")
+                print(" ", end="")
             for j in range(self.__size):
                 print('#', end='')
-            print()
+            print("")
