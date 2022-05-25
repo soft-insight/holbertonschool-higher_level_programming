@@ -6,9 +6,9 @@ class Square:
     """
     constructor with optional private attribute @size.
     """
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         """try / except TypeError, ValueError """
-        
+
         self.__size = size
 
         if type(self.__size) != int:
