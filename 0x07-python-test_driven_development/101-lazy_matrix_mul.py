@@ -4,11 +4,11 @@
 """
 
 
+import numpy as np
+
 def lazy_matrix_mul(m_a, m_b):
     """ Multiplication of
         two conformables matrices
     """
 
-    import numpy as np
-
-    return np.matmul(m_a, m_b)
+    return np.dot(m_a, m_b)
