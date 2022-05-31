@@ -7,12 +7,8 @@
 
 
 def add_integer(a, b=98):
-    """
-    function that adds two integers:
-        * the default value of b is 98.
-        * a doesn't have default value.
-        * floats are converted to int:
-            only the integer part of the float is consider.
+    """function that adds two integers:
+       : * the default value of b is 98.
     """
 
     if type(a) is not int and type(a) is not float:
@@ -20,6 +16,4 @@ def add_integer(a, b=98):
     if type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
 
-    a = int(a)
-    b = int(b)
-    return a + b
+    return int(a) + int(b)
