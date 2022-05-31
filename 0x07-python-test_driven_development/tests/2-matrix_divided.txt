@@ -52,6 +52,9 @@ Test case #1: A test case with integer elements and integer divider
     >>> matrix_divided(matrix, 3)
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
 Test case #2: A test case with integer and float elements and float divider
 
     >>> matrix = [[1.0, -2.0, -3.0],[-4.0, 5.0, -6.0]]
