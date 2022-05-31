@@ -1,0 +1,53 @@
+# Import the function
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+# Testing normal output
+
+>>> text_indentation("The core. The core.")
+The core.
+<BLANKLINE>
+The core.
+<BLANKLINE>
+
+>>> text_indentation("The core: The core:")
+The core:
+<BLANKLINE>
+The core:
+<BLANKLINE>
+
+>>> text_indentation("The core? The core?")
+The core?
+<BLANKLINE>
+The core?
+<BLANKLINE>
+
+>>> text_indentation("   The core. The core.   ")
+The core.
+<BLANKLINE>
+The core.
+<BLANKLINE>
+
+>>> text_indentation("Holberton School")
+Holberton School
+>>> text_indentation("Holberton.School")
+Holberton.
+<BLANKLINE>
+School
+>>> text_indentation("Holberton.School?How are you:John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
+
+# Raise error if parameter have a different type
+
+>>> text_indentation(51)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
