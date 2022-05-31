@@ -11,6 +11,8 @@ The core.
 The core.
 <BLANKLINE>
 
+
+
 >>> text_indentation("The core: The core:")
 The core:
 <BLANKLINE>
@@ -23,14 +25,9 @@ The core?
 The core?
 <BLANKLINE>
 
->>> text_indentation("   The core. The core.   ")
-The core.
-<BLANKLINE>
-The core.
-<BLANKLINE>
-
 >>> text_indentation("Holberton School")
 Holberton School
+
 >>> text_indentation("Holberton.School")
 Holberton.
 <BLANKLINE>

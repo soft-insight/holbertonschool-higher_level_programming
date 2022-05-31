@@ -14,9 +14,9 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     for i in range(len(text)):
-        if text[i] is ' ' and text[i - 1] in {'.', ':', '?'}:
+        if text[i] == ' ' and text[i - 1] in {'.', ':', '?'}:
             continue
-        
+
         print(text[i], end='')
-        if text[i] == '.' or text[i] == ':' or text[i] == '?':
+        if text[i] in {'.', ':', '?'}:
             print('\n')
