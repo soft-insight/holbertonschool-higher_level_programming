@@ -9,14 +9,24 @@ def text_indentation(text):
     """
     indent after ., ?, or :
     """
-
-    if type(text) is not str:
-        raise TypeError("text must be a string")
+    if not (isinstance(text, str)):
+        raise TypeError('text must be a string')
 
     for i in range(len(text)):
-        if text[i] == ' ' and text[i - 1] in {'.', ':', '?'}:
+        if (text[i] == ' ' and (text[i - 1] == '.' or text[i - 1] == ':'
+            or text[i -1] == '?')) :
             continue
-
+        
         print(text[i], end='')
-        if text[i] in {'.', ':', '?'}:
+        if text[i] == '.' or text[i] == ':' or text[i] == '?':
             print('\n')
+
+   
+
+    # for i in range(len(text)):
+    #     if text[i] == ' ' and text[i - 1] in {'.', ':', '?'}:
+    #         continue
+
+    #     print(text[i], end='')
+    #     if text[i] in {'.', ':', '?'}:
+    #         print('\n')
