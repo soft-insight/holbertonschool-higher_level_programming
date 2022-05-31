@@ -36,7 +36,7 @@ def matrix_divided(matrix, div):
     A = []
     [A.append(matrix[i][j]) for i in range(row) for j in range(col)]
 
-    if type(div) not in {int, float} or div == float('nan'):
+    if type(div) not in {int, float}:
         raise TypeError("div must be a number")
 
     if div == 0:
