@@ -8,7 +8,7 @@ class Rectangle:
     '''
     class that will contain a description of rectangle
     '''
-    side = 0
+
     number_of_instances = 0
     print_symbol = '#'
 
@@ -44,20 +44,23 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        return(self.__width * self.__height)
+        return self.__width * self.__height
 
     def perimeter(self):
-        side = self.__width + self.__height
         if self.__width == 0 or self.__height == 0:
             return 0
-        return(side + side)
+        return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        a = str(self.print_symbol)
         if self.__width == 0 or self.__height == 0:
-            return ('')
-        return((a * self.__width + '{0}'.
-                format('\n')) * (self.__height - 1) + a * self.__width)
+            return ''
+        string = ''
+        for i in range(self.__height):
+            for j in range(self.__width):
+                string += str(self.print_symbol)
+            if i != self.__height - 1:
+                string += '\n'
+        return string
 
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
