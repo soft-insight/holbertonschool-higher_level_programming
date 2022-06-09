@@ -1,6 +1,7 @@
 #!usr/bin/python3
-""" from json to string
-"""
+""" from json to string"""
+
+
 import json
 
 
