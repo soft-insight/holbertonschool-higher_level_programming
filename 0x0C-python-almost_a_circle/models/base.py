@@ -6,9 +6,15 @@ import json
 
 
 class Base:
+    """class Base
+        attribute: id
+    """
+
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """Constructor"""
+
         self.id = id
         if id is None:
             Base.__nb_objects += 1
@@ -29,6 +35,7 @@ class Base:
         """ save to file the JSON string representation
             of list objects
         """
+
         filename = cls.__name__ + '.json'
         if list_objs is None:
             list_objs = []
@@ -40,6 +47,7 @@ class Base:
     def from_json_string(json_string):
         """ from JSON to string
         """
+
         if json_string is None or len(json_string) == 0:
             return []
 
@@ -48,7 +56,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """
+        ... create dictionary
         """
+
         if cls.__name__ == 'Square':
             dummy = cls(1)
 
