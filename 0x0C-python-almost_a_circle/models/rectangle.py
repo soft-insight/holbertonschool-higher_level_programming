@@ -5,9 +5,16 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """class rectangle
+    ...attributes:
+            width
+            height
+            x
+            y
+            id
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ constructor of the Rectangle class
-        """
+        """ constructor of the Rectangle class """
         self.width = width
         self.height = height
         self.x = x
