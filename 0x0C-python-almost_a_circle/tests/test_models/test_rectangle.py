@@ -114,7 +114,7 @@ class TetsRectangle_01_methods(unittest.TestCase):
         str2 = "[Rectangle] (34) 0/0 - 1/2"
         self.assertEqual(rs2.__str__(), str2)
 
-    def test_07_init_update(sef):
+    def test_07_init_update(self):
         """Test update method"""
 
         """only with *args"""
