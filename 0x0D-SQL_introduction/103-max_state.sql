@@ -2,4 +2,5 @@
 -- of each state (ordered by State name).
 SELECT state, MAX(value) 'max_temp'
 FROM temperatures
-GROUP BY state;
+GROUP BY state
+ORDER BY state;
