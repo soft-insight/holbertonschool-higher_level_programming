@@ -1,8 +1,13 @@
 #!/usr/bin/node
-const myObject = {
-  type: 'object',
-  value: 12
-};
 
-myObject.value = 89;
-console.log(myObject);
+let array = process.argv.slice(2);
+
+if (process.argv[2] == null || process.argv[3] == null) {
+  console.log(0);
+} else {
+  array = array.map(Number);
+  array = array.sort((a, b) => { return (b - a); });
+
+  console.log(array);
+  console.log(array[1]);
+}
