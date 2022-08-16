@@ -8,6 +8,5 @@ if (process.argv[2] == null || process.argv[3] == null) {
   array = array.map(Number);
   array = array.sort((a, b) => { return (b - a); });
 
-  console.log(array);
   console.log(array[1]);
 }
