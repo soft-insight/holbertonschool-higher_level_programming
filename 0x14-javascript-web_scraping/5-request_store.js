@@ -11,8 +11,8 @@ axios.get(url)
     fs.writeFile(file, response.data, 'utf8', (err) => {
       if (err) {
         console.log(err);
-      }  
-  });
+      }
+    });
   })
   .catch(function (error) {
     console.log(error);
