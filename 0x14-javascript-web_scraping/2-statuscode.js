@@ -4,7 +4,7 @@ const axios = require('axios').default;
 const url = process.argv[2];
 
 axios.get(url)
-.then(function (response) {
+  .then(function (response) {
     // handle success
     console.log('code: ' + response.status);
   })
