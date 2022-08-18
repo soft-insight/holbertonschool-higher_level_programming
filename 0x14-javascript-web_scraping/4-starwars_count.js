@@ -7,8 +7,9 @@ const url = process.argv[2];
 
 axios.get(url)
   .then(function (response) {
+    let lgth = response.data.results.length;
     let movie = 0;
-    for (let i = 0; i < response.data.results.length; i++) {
+    for (let i = 0; i < lgth; i++) {
       if (response.data.results[i].characters.includes(antilles)) {
         movie += 1;
       }

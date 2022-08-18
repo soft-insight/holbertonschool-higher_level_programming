@@ -28,7 +28,7 @@ axios.get(url)
           idx += 1;
         }
       }
-      complJob[j] = idx;
+      complJob[j + 1] = idx;
       // console.log(complJob);
     }
     console.log(complJob);
