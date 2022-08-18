@@ -1,9 +1,13 @@
 #!/usr/bin/node
 // Rectangle double inheritance
 
-const Square1 = require('./5-square.js');
+const Rectangle = require('./4-rectangle');
 
-module.exports = class Square extends Square1 {
+module.exports = class Square extends Rectangle {
+  constructor (size) {
+    super(size, size);
+  }
+
   charPrint (c) {
     if (c === undefined) {
       this.print();
