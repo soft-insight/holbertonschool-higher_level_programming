@@ -12,16 +12,16 @@ axios.get(url)
     const complJob = {};
 
     const usId = [];
-    for (i = 0; i < lgth; i++) {
-      usId.push(response.data[i].userId)
+    for (let i = 0; i < lgth; i++) {
+      usId.push(response.data[i].userId);
     }
 
     const unique = (value, index, self) => {
-      return self.indexOf(value) === index
-    }
+      return self.indexOf(value) === index;
+    };
     const usIdUnique = usId.filter(unique);
- 
-    for (j = 0; j < usIdUnique.length; j++) {
+
+    for (let j = 0; j < usIdUnique.length; j++) {
       let idx = 0;
       for (let i = 0; i < lgth; i++) {
         if (response.data[i].userId === usIdUnique[j] && response.data[i].completed === true) {
