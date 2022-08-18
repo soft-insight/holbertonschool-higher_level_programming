@@ -11,10 +11,20 @@ axios.get(url)
 
     const complJob = {};
 
-    for (let j = 1; j < 11; j++) {
+    const usId = [];
+    for (i = 0; i < lgth; i++) {
+      usId.push(response.data[i].userId)
+    }
+
+    const unique = (value, index, self) => {
+      return self.indexOf(value) === index
+    }
+    const usIdUnique = usId.filter(unique);
+ 
+    for (j = 0; j < usIdUnique.length; j++) {
       let idx = 0;
       for (let i = 0; i < lgth; i++) {
-        if (response.data[i].userId === j && response.data[i].completed === true) {
+        if (response.data[i].userId === usIdUnique[j] && response.data[i].completed === true) {
           idx += 1;
         }
       }
@@ -24,7 +34,7 @@ axios.get(url)
     console.log(complJob);
   })
   .catch(function (error) {
-    console.log(error);
+    console.log(error.response);
   })
   .then(function () {
   });
