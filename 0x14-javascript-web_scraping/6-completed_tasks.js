@@ -28,7 +28,7 @@ axios.get(url)
           idx += 1;
         }
       }
-      complJob[j + 1] = idx;
+      complJob[usIdUnique[j]] = idx;
       // console.log(complJob);
     }
     console.log(complJob);
